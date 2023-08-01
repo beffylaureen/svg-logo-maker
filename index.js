@@ -2,6 +2,7 @@
 
 const inquirer = require('inquirer');
 const fs = require ('fs');
+const Shape = require('./lib/shapes.js');
 
 // TODO: Create an array of questions for user input
 
@@ -30,7 +31,13 @@ const questions = [
   },
 ];
 // TODO: Create a function to generate logo
+  function writeToFile(image){
+    const filename = './examples/logo.svg';
 
+    fs.writeFile(filename, image, function (err){
+      err ? console.log(err) : console.log(filename + " Generated logo.svg!")
+    })
+  }
 
 // TODO: Create a function to initialize app
 function init(){
