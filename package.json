@@ -15,5 +15,8 @@
   "dependencies": {
     "inquirer": "^8.2.5"
   },
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "jest": "^29.6.2"
+  }
 }
