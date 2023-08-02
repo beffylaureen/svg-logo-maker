@@ -2,7 +2,8 @@
 
 const inquirer = require('inquirer');
 const fs = require ('fs');
-const Shape = require('./lib/shapes.js');
+//const Shapes = require('./lib/shapes.js');
+const generateSvg = require('./lib/shapes.js');
 
 // TODO: Create an array of questions for user input
 
@@ -11,6 +12,9 @@ const questions = [
     type: 'input',
     name: 'characters',
     message: 'Please enter up to three characters.  The logo will display as you enter it here (upper-case, lower-case, special characters, etc.)',
+    validate: function(data){
+      return data.length<=3
+    },
   },
   {
     type: 'input',
@@ -22,7 +26,7 @@ const questions = [
     type: 'list',
     name: 'shape',
     message: 'Please choose a shape:',
-    choices: ['circle','square','triangle'],
+    choices: ['Circle','Square','Triangle'],
   },
   {
     type: 'input',
@@ -31,10 +35,10 @@ const questions = [
   },
 ];
 // TODO: Create a function to generate logo
-  function writeToFile(image){
+  function writeToFile(svg) {
     const filename = './examples/logo.svg';
 
-    fs.writeFile(filename, image, function (err){
+    fs.writeToFile(filename, svg, function (err){
       err ? console.log(err) : console.log(filename + " Generated logo.svg!")
     })
   }
@@ -42,7 +46,7 @@ const questions = [
 // TODO: Create a function to initialize app
 function init(){
   inquirer.prompt(questions)
-  .then (answers => writeToFile('logo.svg', answers))
+  .then (answers => writeToFile(generateSvg(answers)))
 }
 
 init();
