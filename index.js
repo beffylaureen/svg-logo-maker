@@ -38,7 +38,7 @@ const questions = [
   function writeToFile(answers) {
     const filename = './examples/logo.svg';
 
-    const svg = shapes (answers);
+    //const svg = shapes (answers);
 
     fs.writeFile(filename, svg, function (err){
       err ? console.log(err) : console.log(filename + " Generated logo.svg!")
