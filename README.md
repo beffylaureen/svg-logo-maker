@@ -33,9 +33,9 @@ This is a Coding Boot Camp homework assignment and outside contributions are not
 Do you have any questions? Reach me on github at [beffylaureen](https://github.com/beffylaureen).
 
 
-## <img src="./examples/Screenshot 2023-08-02 at 1.07.33 AM.png" alt = "SVG Screenshot" />
+## <img src="./examples/Screenshot 2023-08-21 at 10.13.50 PM.png" alt = "SVG Screenshot" />
 
 
 ## https://github.com/beffylaureen/svg-logo-maker
-## https://drive.google.com/file/d/12m8W9oHGB5UPnwfHTODVPC_YW6HgY-jI/view
+## https://drive.google.com/file/d/1g3KvnSQgmbjgRT5N--Hu-fPcB6A5K4_k/view
 
